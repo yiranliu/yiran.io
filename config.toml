@@ -1,6 +1,6 @@
 baseURL = "https://hugo-theme-shell.netlify.app/"
 languageCode = "en-us"
-title = "Terminal@Yiran7"
+title = "Terminal@Yiran8"
 theme = "hugo-theme-shell"
 
 [Params]
@@ -32,7 +32,7 @@ theme = "hugo-theme-shell"
     description = """
   Welcome to my personal website
   where the returns are always high and the risk is always low 
-  # just like my backtest restuls with DNN...
+  # just like my backtest results with DNN...
   
   My name is Yiran Liu and I specialize in quantitative trading. 
   Let's make some data-driven decisions together  
