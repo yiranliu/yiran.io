@@ -6,7 +6,9 @@
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
 	{{ $trail := printf "<span id=terminal>trail %s/*.log</span>" .Site.Params.Terminal.workDir | safeHTML }}
 	
-	
+    {{ $limit2 := sub (len (findRE "\n" .Site.Params.Terminal.description2)) 1 }}
+    {{ $description2 = printf "<span id='terminal'>%s</span>" .Site.Params.Terminal.description2 }}
+    {{ $description2 = replaceRE "\n" "<br>" $description2 $limit2| safeHTML }}
 
     {{ $description := "" }}
     {{ if eq (substr .Site.Params.Terminal.description -3 3) ".md" }}
@@ -22,9 +24,7 @@
     {{ $description = replaceRE "\n" "<br>" $description $limit| safeHTML }}
     {{ end }}
 
-    {{ $limit2 := sub (len (findRE "\n" .Site.Params.Terminal.description2)) 1 }}
-    {{ $description2 = printf "<span id='terminal'>%s</span>" .Site.Params.Terminal.description2 }}
-    {{ $description2 = replaceRE "\n" "<br>" $description2 $limit2| safeHTML }}
+
 
     {{ $tree := "" }}
     {{ $leaf := "" }}
