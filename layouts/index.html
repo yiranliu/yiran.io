@@ -4,9 +4,9 @@
 
     {{ $cd := printf "<span id='terminal'>cd %s</span>" .Site.Params.Terminal.workDir | safeHTML }}
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
-	{{ $trail := printf "<span id=terminal>trail %s/*.log</span>" .Site.Params.Terminal.workDir | safeHTML }}
+	{{ $trail := printf "<span id=terminal>trail /%s/*.log</span>" .Site.Params.Tree.folderName | safeHTML }}
 	
-	
+	{{ $description2 = printf "<span id='terminal'>%s</span>" .Site.Params.Terminal.description }}
 
     {{ $description := "" }}
     {{ if eq (substr .Site.Params.Terminal.description -3 3) ".md" }}
@@ -21,6 +21,7 @@
     {{ $description = printf "<span id='terminal'>%s</span>" .Site.Params.Terminal.description }}
     {{ $description = replaceRE "\n" "<br>" $description $limit| safeHTML }}
     {{ end }}
+	
 
 
     {{ $tree := "" }}
@@ -55,6 +56,6 @@
     {{ $stdoutDelay :=  $.Site.Params.Terminal.stdoutDelay }}
     {{ $commandDelay := $.Site.Params.Terminal.commandDelay }}
 
-    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "tree" $tree "leaf" $leaf "trail" $trail "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
+    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "tree" $tree "leaf" $leaf "trail" $trail "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
 
 {{ end }}
