@@ -26,8 +26,8 @@ theme = "hugo-theme-shell"
   # Note: 
   # Note: if you want to enable Mathjax, you need to set it to 0
   # Note: and set "math: true" at front matter in your Markdown file
-  titleDelay = 50 # title speed : "title" in front matter
-  contentDelay = 50 # content speed : content in .md file
+  titleDelay = 20 # title speed : "title" in front matter
+  contentDelay = 20 # content speed : content in .md file
   
     description = """
   Welcome to my personal website
@@ -42,8 +42,12 @@ theme = "hugo-theme-shell"
     [Params.Tree]
     use = true
     files = [
-        ["Work[-1]", "https://www.example.com/"],
-        ["Work[-2]", "https://www.example.com/"],
-        ["Work[-3]", "/works/go.md"],
-        ["Work[-4]", "/works/hugo.md"]
+        ["log_exp_hk_ms_21.log"],
+		["log_exp_hk_jpm_19.log"],
+		["log_exp_ln_avt_17.log"],
+		["log_exp_ln_cmc_12.log"],
+		["log_exp_ln_oak_11.log"],
+		["log_edu_ln_ic_16.log"],
+		["log_edu_ln_kcl_11.log"],
+		["log_edu_cn_xj~sh_~.log"]
     ]
