@@ -39,11 +39,7 @@ theme = "hugo-theme-shell"
     Let's make some data-driven decisions together  
 
     """
-    
-    description2 = """
-    TBC>>>
-    """
-    
+        
     [Params.Tree]
     use = true    
     files = [
