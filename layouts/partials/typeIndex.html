@@ -4,6 +4,7 @@
 <span id="ps1_03"></span> <span id="tree"></span> <br>
 <span id="std_out_02"></span> <br>
 <span id="ps1_05"></span> <span id="trail"></span> <br>
+<span id="std_out_03"></span> <br>
 <span id="ps1_04"></span>
 
 <script type="text/javascript">
@@ -60,6 +61,7 @@
 		await typewriter("{{ .envWithDir }}", "ps1_03", ps1Delay); await typewriter("{{ .tree }}", "tree", commandDelay);
 		await typewriter("{{ .leaf }}", "std_out_02", 1);
 		await typewriter("{{ .envWithDir }}", "ps1_05", ps1Delay); await typewriter("{{ .trail }}", "trail", commandDelay);
+		await typewriter("{{ .description2 }}", "std_out_03", stdoutDelay);
 		await typewriter("{{ .envWithDir }}", "ps1_04", ps1Delay);
     return;
 }
