@@ -16,7 +16,7 @@ theme = "hugo-theme-shell"
   # Note: if you want to enable Mathjax, you need to set it to 0
   # Note: and set "math: true" at front matter in your Markdown file
   ps1Delay = 0 # prompt speed : [userName]@[pcName]:~/$ , [userName]@[pcName]:~/[workDir]$
-  stdoutDelay = 0 # stdout speed : [description] , files in Params.Tree
+  stdoutDelay = 25 # stdout speed : [description] , files in Params.Tree
   commandDelay = 50 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
 
   # terminalDelay = 20 : deprecated
@@ -26,13 +26,13 @@ theme = "hugo-theme-shell"
   # Note: 
   # Note: if you want to enable Mathjax, you need to set it to 0
   # Note: and set "math: true" at front matter in your Markdown file
-  titleDelay = 20 # title speed : "title" in front matter
-  contentDelay = 15 # content speed : content in .md file
+  titleDelay = 30 # title speed : "title" in front matter
+  contentDelay = 30 # content speed : content in .md file
   
     description = """
   Welcome to my personal website
   where the returns are always high and the risk is always low 
-  # just like my overfitted backtest results
+  # just like my backtest restuls with DNN...
   
   My name is Yiran Liu and I specialize in quantitative trading. 
   Let's make some data-driven decisions together  
