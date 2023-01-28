@@ -30,6 +30,8 @@ theme = "hugo-theme-shell"
     contentDelay = 20 # content speed : content in .md file
 
     description = """
+    
+    
     Welcome to my personal website
     where the returns are always high and the risk is always low 
     # just like my backtest results with DNN...
