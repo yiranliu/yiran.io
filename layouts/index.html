@@ -4,7 +4,7 @@
 
     {{ $cd := printf "<span id='terminal'>cd %s</span>" .Site.Params.Terminal.workDir | safeHTML }}
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
-	{{ $trail := printf "<span id=terminal>trail %s /*.log</span>" .Site.Params.Terminal.profile | safeHTML }}
+	{{ $trail := printf "<span id=terminal>trail %s</span>" .Site.Params.Terminal.profile | safeHTML }}
 	
 	
 
@@ -55,6 +55,6 @@
     {{ $stdoutDelay :=  $.Site.Params.Terminal.stdoutDelay }}
     {{ $commandDelay := $.Site.Params.Terminal.commandDelay }}
 
-    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "tree" $tree "leaf" $leaf "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
+    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "tree" $tree "leaf" $leaf "trail" $trail "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
 
 {{ end }}
