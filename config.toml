@@ -6,7 +6,11 @@ theme = "hugo-theme-shell"
 [Params]
     [Params.Terminal]
     schema = "gruvbox_dark"
-
+    userName = "root"
+    pcName = "terminal5"
+    workDir = "doc"
+    profile = "profile.txt"
+    
     [Params.Tree]
     use = true
     files = [
