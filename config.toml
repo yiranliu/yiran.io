@@ -43,6 +43,11 @@ theme = "hugo-theme-shell"
     description2 to be added>> 
     """
     
+    description3 = """
+    email=topq@live.com     linkedin=linkedin.yiran.io    
+    """
+    
+    
     [Params.Tree]
     use = true    
     folderName = "var/log"
