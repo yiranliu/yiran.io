@@ -10,39 +10,38 @@ theme = "hugo-theme-shell"
     pcName = "terminal5"
     workDir = "doc"
     profile = "readme.nfo"
-	 = "readme.nfo"
-      # Note: speed at which text is displayed on the terminal
-  # Note: if set to 0, typing animation will be disabled
-  # Note:
-  # Note: if you want to enable Mathjax, you need to set it to 0
-  # Note: and set "math: true" at front matter in your Markdown file
-  ps1Delay = 10 # prompt speed : [userName]@[pcName]:~/$ , [userName]@[pcName]:~/[workDir]$
-  stdoutDelay = 25 # stdout speed : [description] , files in Params.Tree
-  commandDelay = 50 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
+    folderName = "var/log"
+    # Note: speed at which text is displayed on the terminal
+    # Note: if set to 0, typing animation will be disabled
+    # Note:
+    # Note: if you want to enable Mathjax, you need to set it to 0
+    # Note: and set "math: true" at front matter in your Markdown file
+    ps1Delay = 10 # prompt speed : [userName]@[pcName]:~/$ , [userName]@[pcName]:~/[workDir]$
+    stdoutDelay = 25 # stdout speed : [description] , files in Params.Tree
+    commandDelay = 50 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
 
-  # terminalDelay = 20 : deprecated
+    # terminalDelay = 20 : deprecated
 
-  # Note: speed at which text is displayed on the activity pages
-  # Note: if set to 0, typing animation will be disabled
-  # Note: 
-  # Note: if you want to enable Mathjax, you need to set it to 0
-  # Note: and set "math: true" at front matter in your Markdown file
-  titleDelay = 20 # title speed : "title" in front matter
-  contentDelay = 20 # content speed : content in .md file
-  
+    # Note: speed at which text is displayed on the activity pages
+    # Note: if set to 0, typing animation will be disabled
+    # Note: 
+    # Note: if you want to enable Mathjax, you need to set it to 0
+    # Note: and set "math: true" at front matter in your Markdown file
+    titleDelay = 20 # title speed : "title" in front matter
+    contentDelay = 20 # content speed : content in .md file
+
     description = """
-  Welcome to my personal website
-  where the returns are always high and the risk is always low 
-  # just like my backtest results with DNN...
-  
-  My name is Yiran Liu and I specialize in quantitative trading. 
-  Let's make some data-driven decisions together  
-  
-  """
+    Welcome to my personal website
+    where the returns are always high and the risk is always low 
+    # just like my backtest results with DNN...
+
+    My name is Yiran Liu and I specialize in quantitative trading. 
+    Let's make some data-driven decisions together  
+
+    """
     
     [Params.Tree]
-    use = true
-    
+    use = true    
     files = [
         ["log_exp_hk_ms_21.log", "/"],
 		["log_exp_hk_jpm_19.log", "/"],
