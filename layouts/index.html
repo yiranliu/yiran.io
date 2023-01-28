@@ -20,7 +20,9 @@
     {{ $description = replaceRE "\n" "<br>" $description $limit| safeHTML }}
     {{ end }}
 
-	{{ $description2 := "" }}
+	
+	{{ $limit2 := sub (len (findRE "\n" .Site.Params.Terminal.description2)) 1 }}
+	{{ $description2 = printf "<span id='terminal'>%s</span>" .Site.Params.Terminal.description2 }}
 
     {{ $tree := "" }}
     {{ $leaf := "" }}
