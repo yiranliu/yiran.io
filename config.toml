@@ -1,6 +1,6 @@
 baseURL = "https://hugo-theme-shell.netlify.app/"
 languageCode = "en-us"
-title = "Terminal@Yiran5"
+title = "Terminal@Yiran6"
 theme = "hugo-theme-shell"
 
 [Params]
