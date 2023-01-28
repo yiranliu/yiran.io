@@ -5,13 +5,13 @@ theme = "hugo-theme-shell"
 
 [Params]
     [Params.Terminal]
-    schema = "Tender"
+    schema = "gruvbox_dark"
 
     [Params.Tree]
     use = true
     files = [
-        ["C/C++", "https://www.example.com/"],
-        ["Python", "https://www.example.com/"],
-        ["Go", "/works/go.md"],
-        ["Hugo", "/works/hugo.md"]
+        ["Work[-1]", "https://www.example.com/"],
+        ["Work[-2]", "https://www.example.com/"],
+        ["Work[-3]", "/works/go.md"],
+        ["Work[-4]", "/works/hugo.md"]
     ]
