@@ -12,10 +12,13 @@ theme = "hugo-theme-shell"
     profile = "profile.txt"
     
     description = """
-  Welcome to my personal website, where the returns are always high and the risk is always low 
-  - just like my jokes! 
+  Welcome to my personal website
+  where the returns are always high and the risk is always low 
+  # just like my jokes! 
+  
   My name is Yiran Liu and I specialize in quantitative trading. 
   Let's make some data-driven decisions together  
+  
   """
     
     [Params.Tree]
