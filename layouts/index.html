@@ -4,7 +4,8 @@
 
     {{ $cd := printf "<span id='terminal'>cd %s</span>" .Site.Params.Terminal.workDir | safeHTML }}
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
-	{{ $trail := printf "<span id=terminal>trail /var/log/*.log%s</span>" "" | safeHTML }}
+	{{ $trail := printf "<span id=terminal>trail %s /*.log</span>" .Site.Params.Terminal.profile | safeHTML }}
+	
 	
 
     {{ $description := "" }}
