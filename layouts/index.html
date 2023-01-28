@@ -4,6 +4,8 @@
 
     {{ $cd := printf "<span id='terminal'>cd %s</span>" .Site.Params.Terminal.workDir | safeHTML }}
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
+	{{ $trail := printf "<span id=terminal>trail /var/log/*.log</span>" .Site.Params.Terminal.profile | safeHTML }}
+	
 
     {{ $description := "" }}
     {{ if eq (substr .Site.Params.Terminal.description -3 3) ".md" }}
@@ -24,7 +26,7 @@
     {{ $leaf := "" }}
     {{ if .Site.Params.Tree.use }}
     {{ $tree = printf "<span id='terminal'>tree /%s/</span>" .Site.Params.Tree.folderName | safeHTML}}
-	{{ $trail = printf "<span id='terminal'>trail /var/log/*.log</span>" .Site.Params.Tree.folderName | safeHTML}}
+
     {{ $leaf = printf "%s<strong><span id='dir'>./%s/</span></strong><br>" $leaf .Site.Params.Tree.folderName | safeHTML}}
         {{ range $index, $val := .Site.Params.Tree.files }}
             {{ $ac := index $val 0}}
