@@ -26,8 +26,8 @@ theme = "hugo-theme-shell"
   # Note: 
   # Note: if you want to enable Mathjax, you need to set it to 0
   # Note: and set "math: true" at front matter in your Markdown file
-  titleDelay = 1 # title speed : "title" in front matter
-  contentDelay = 1 # content speed : content in .md file
+  titleDelay = 20 # title speed : "title" in front matter
+  contentDelay = 15 # content speed : content in .md file
   
     description = """
   Welcome to my personal website
