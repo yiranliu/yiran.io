@@ -5,7 +5,7 @@ theme = "hugo-theme-shell"
 
 [Params]
     [Params.Terminal]
-    schema = "monokai"
+    schema = "Tender"
 
     [Params.Tree]
     use = true
