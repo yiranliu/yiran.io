@@ -17,7 +17,7 @@ theme = "hugo-theme-shell"
     # Note: and set "math: true" at front matter in your Markdown file
     ps1Delay = 10 # prompt speed : [userName]@[pcName]:~/$ , [userName]@[pcName]:~/[workDir]$
     stdoutDelay = 25 # stdout speed : [description] , files in Params.Tree
-    commandDelay = 50 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
+    commandDelay = 20 # command speed : cd [workDir] , cat [profile] , tree ./[folderName]/
 
     # terminalDelay = 20 : deprecated
 
@@ -40,7 +40,7 @@ theme = "hugo-theme-shell"
     """
 
     description2 = """
-    description2 lalala 
+    description2 to be added>> 
     """
     
     [Params.Tree]

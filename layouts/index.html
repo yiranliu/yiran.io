@@ -5,6 +5,7 @@
     {{ $cd := printf "<span id='terminal'>cd %s</span>" .Site.Params.Terminal.workDir | safeHTML }}
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
 	{{ $trail := printf "<span id=terminal>trail %s/*.log</span>" .Site.Params.Terminal.workDir | safeHTML }}
+	{{ $id := printf "<span id=terminal>id</span>" | safeHTML }}
 
     {{ $description := "" }}
     {{ if eq (substr .Site.Params.Terminal.description -3 3) ".md" }}
@@ -55,6 +56,6 @@
     {{ $commandDelay := $.Site.Params.Terminal.commandDelay }}
 	{{ $description2 := printf "<span id='terminal'>%s</span>" .Site.Params.Terminal.description2 | safeHTML}}
 
-    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "tree" $tree "leaf" $leaf "trail" $trail "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
+    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "tree" $tree "leaf" $leaf "trail" $trail "id" $id "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
 
 {{ end }}
