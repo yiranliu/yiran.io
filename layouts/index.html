@@ -49,12 +49,12 @@
 
     {{ $end := $env }}
 
-    {{ $payload := delimit (slice $cd $cat $description $tree $leaf $end) "" }}
+    {{ $payload := delimit (slice $cd $cat $description $description2 $tree $leaf $end) "" }}
 
     {{ $ps1Delay := $.Site.Params.Terminal.ps1Delay }}
     {{ $stdoutDelay :=  $.Site.Params.Terminal.stdoutDelay }}
     {{ $commandDelay := $.Site.Params.Terminal.commandDelay }}
 
-    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "tree" $tree "leaf" $leaf "trail" $trail "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
+    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "tree" $tree "leaf" $leaf "trail" $trail "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
 
 {{ end }}
