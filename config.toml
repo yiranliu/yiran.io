@@ -42,12 +42,12 @@ theme = "hugo-theme-shell"
     [Params.Tree]
     use = true
     files = [
-        ["log_exp_hk_ms_21.log", ""],
-		["log_exp_hk_jpm_19.log", ""],
-		["log_exp_ln_avt_17.log", ""],
-		["log_exp_ln_cmc_12.log", ""],
-		["log_exp_ln_oak_11.log", ""],
-		["log_edu_ln_ic_16.log", ""],
-		["log_edu_ln_kcl_11.log", ""],
-		["log_edu_cn_xj~sh_~.log", ""]
+        ["log_exp_hk_ms_21.log", "/"],
+		["log_exp_hk_jpm_19.log", "/"],
+		["log_exp_ln_avt_17.log", "/"],
+		["log_exp_ln_cmc_12.log", "/"],
+		["log_exp_ln_oak_11.log", "/"],
+		["log_edu_ln_ic_16.log", "/"],
+		["log_edu_ln_kcl_11.log", "/"],
+		["log_edu_cn_xj~sh_~.log", "/"]
     ]
