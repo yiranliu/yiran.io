@@ -9,8 +9,7 @@ theme = "hugo-theme-shell"
     userName = "root"
     pcName = "terminal5"
     workDir = "doc"
-    profile = "readme.nfo"
-    folderName = "var/log"
+    profile = "readme.nfo"    
     # Note: speed at which text is displayed on the terminal
     # Note: if set to 0, typing animation will be disabled
     # Note:
@@ -42,6 +41,7 @@ theme = "hugo-theme-shell"
     
     [Params.Tree]
     use = true    
+    folderName = "var/log"
     files = [
         ["log_exp_hk_ms_21.log", "/"],
 		["log_exp_hk_jpm_19.log", "/"],
