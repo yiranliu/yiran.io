@@ -4,7 +4,6 @@
 
     {{ $cd := printf "<span id='terminal'>cd %s</span>" .Site.Params.Terminal.workDir | safeHTML }}
     {{ $cat := printf "<span id=terminal>cat %s</span>" .Site.Params.Terminal.profile | safeHTML }}
-	{{ $cat2 := printf "<span id=terminal> %s</span>" .Site.Params.Terminal.profile | safeHTML }}
 
     {{ $description := "" }}
     {{ if eq (substr .Site.Params.Terminal.description -3 3) ".md" }}
