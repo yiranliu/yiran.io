@@ -74,14 +74,9 @@ theme = "hugo-theme-shell"
 	==> log_edu_cn_xj~sh_~.log <==
 	2009-08 INFO CHINA SHANGHAI [KEY] ME, learn to study seriously. Experience a rush of memories with a stroll down memory lane. Revisit your first adventures in the big city, where excitement and learning walked hand in hand. Let nostalgia take you back to a time of growth and discovery, and relive the thrill of embracing new opportunities in an urban setting
 	2005-08 INFO CHINA XINJIANG [KEY] ME, pure happiness. Nostalgia whispers softly, as I recall the blissful days of my youth, spent basking in the golden rays of the sun amidst the rolling hills of rural China. The very thought of it brings a smile to my lips, for it was a time of pure happiness, untainted by the complexities of the world.
-
-
     """
     
-    description3 = """
-    email=topq@live.com     linkedin=linkedin.yiran.io    
-    """
-    
+    description3 = """    email=topq@live.com     linkedin=linkedin.yiran.io """    
     
     [Params.Tree]
     use = true    
