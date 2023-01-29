@@ -30,36 +30,79 @@ theme = "hugo-theme-shell"
     contentDelay = 20 # content speed : content in .md file
 
     description = """
+    
+    
     Welcome to my personal website
     where the returns are always high and the risk is always low 
     # just like my backtest results with DNN...
+
     My name is Yiran Liu and I specialize in quantitative trading. 
     Let's make some data-driven decisions together  
+
     """
 
     description2 = """
 	==> log_exp_hk_ms_21.log <==
+
 	2021-08 INFO MORGAN_STANLEY	HK [KEY] EXECUTIVE_DIRECTOR, Systematic volatility trading in Asia equity derivative market
+	2021-08 INFO MORGAN_STANLEY	HK [OPERATION] Creating new trading signals as well as coverting traders' market understanding into systematic trading models along with a full solution to trade these models 
+	2021-08 INFO MORGAN_STANLEY	HK [COMMENT]  Right challenge for me to drive systematic trading transformation and making real contribution to business
+
+
 	==> log_exp_hk_jpm_19.log <==
+
 	2019-08 INFO JP_MORGAN	HK [KEY] VICE_PRESIDENT, Systematic volatility trading in Asia equity derivative market
+	2019-08 INFO JP_MORGAN	HK [OPERATION] Creating new trading signals as well as coverting traders' market understanding into systematic trading models.
+	2019-08 INFO JP_MORGAN	HK [COMMENT]  Re-use my data driven approach from buy side to transform the equity derivative market making practice 
+
+
 	==> log_exp_ln_avt_17.log <==
+
 	2017-08 INFO AVITAH	LN [KEY] QUANT, hedge fund, trading European electricity/coal/carbon/natgas markets
+	2017-08 INFO AVITAH	LN [OPERATION] Quantamental approach for high dimensional low-frequency data modelling with statistical learning algorithms for predicting electricity-related energy markets
 	2017-08 INFO AVITAH	LN [COMMENT] Working with raw fundamental data and trying to predict the long-term market with limited historical data is like trying to predict the weather for next year with only yesterday's mood swings, it's a real head-scratcher of a challenge!
+
+
 	==> log_exp_ln_cmc_12.log <==
+
 	2012-08 INFO CMC LN [KEY] LEAD_QUANT, market maker, automated market-making models and high-frequency systems
-	2012-08 INFO CMC LN [COMMENT] Learning about high frequency market making is like becoming a wizard in a secret society, you gain the skills to cast spells (aka write trading logic) and learn how to tell what's real magic (what works) and what's just smoke and mirrors (cheats) in the mystical realm of backtesting
+	2012-08 INFO CMC LN [OPERATION] Main modeller for live pricing and market-making strategies covering Indices, FX, and Commodity spot, futures, warrants and digital options
+	2012-08 INFO CMC LN [COMMENT] Learning about high frequency trading and market making is like becoming a wizard in a secret society, you gain the knowledge and skills to cast spells (aka write trading logic) and learn how to tell what's real magic (what works) and what's just smoke and mirrors (cheats) in the mystical realm of backtesting and strategy development
+
+
 	==> log_exp_ln_oak_11.log <==
-	2011-08 INFO OAK LN [KEY] QUANT_TRADER, automated market-making models and high-frequency systems
-	2011-08 INFO OAK LN [COMMENT] Incubating a hedge fund inside a top prop trading firm is like trying to hatch a dragon egg in a fiery furnace, it's a high-heat and high-pressure learning experience that gives you a hands-on workout in the entire quant trading process.
+
+	2011-08 INFO CMC LN [KEY] QUANT_TRADER, automated market-making models and high-frequency systems
+	2011-08 INFO CMC LN [OPERATION] Trading WTI/Brent calendar spreads, more than 20% (up to 50%) of two major commodities future exchanges in trading volume
+	2011-08 INFO CMC LN [COMMENT] Incubating a hedge fund inside a top prop trading firm is like trying to hatch a dragon egg in a fiery furnace, it's a high-heat and high-pressure learning experience that gives you a hands-on workout in the entire quant trading process.
+
+
 	==> log_edu_ln_ic_16.log <==
-	2016-08 INFO IC LN [KEY] IMPERIAL_COLLEGE_LONDON, MSC in Mathematics and Finance (Statistical Learning)
+
+	2016-08 INFO IC LN [KEY] IMPERIAL_COLLEGE_LONDON, MSC in Mathematics and Finance
+	2016-08 INFO IC LN [OPERATION] Part-time research in statistical learning, becoming a mad scientist, unlocking the power to turn data into knowledge and predictions with a flick of a wand (ok, a click of a mouse)
 	2016-08 INFO IC LN [COMMENT] When work and study collide, my social life is as non-existent as a unicorn at a science convention
+
+
 	==> log_edu_ln_kcl_11.log <==
-	2011-08 INFO KCL LN [KEY] KINGS_COLLEGE_LONDON, MSC in Financial Mathematics (Stochastics)
-	2011-08 INFO KCL LN [COMMENT] Countless late nights spent in Maughan Library, searching for the perfect sports betting algorithm to bring me financial freedom, is a wild ride!
+
+	2011-08 INFO KCL LN [KEY] KINGS_COLLEGE_LONDON, MSC in Financial Mathematics
+	2011-08 INFO KCL LN [OPERATION] Load of stochastic calculas
+	2011-08 INFO KCL LN [COMMENT] Countless late nights spent in Maughan Library, playing poker and searching for the perfect sports betting algorithm to bring me financial freedom, is a wild ride!
+
+
+
 	==> log_edu_cn_xj~sh_~.log <==
+
+	2009-08 INFO CHINA SHANGHAI [KEY] ME, learn to study seriously
 	2009-08 INFO CHINA SHANGHAI [COMMENT] Experience a rush of memories with a stroll down memory lane. Revisit your first adventures in the big city, where excitement and learning walked hand in hand. Let nostalgia take you back to a time of growth and discovery, and relive the thrill of embracing new opportunities in an urban setting
+
+	2005-08 INFO CHINA XINJIANG [KEY] ME, pure happiness
 	2005-08 INFO CHINA XINJIANG [COMMENT] Nostalgia whispers softly, as I recall the blissful days of my youth, spent basking in the golden rays of the sun amidst the rolling hills of rural China. The very thought of it brings a smile to my lips, for it was a time of pure happiness, untainted by the complexities of the world.
+
+
+
+
     """
     
     description3 = """
@@ -73,5 +116,10 @@ theme = "hugo-theme-shell"
     files = [
         ["log_exp_hk_ms_21.log", "/"],
 		["log_exp_hk_jpm_19.log", "/"],
-		["...", "/"],
+		["log_exp_ln_avt_17.log", "/"],
+		["log_exp_ln_cmc_12.log", "/"],
+		["log_exp_ln_oak_11.log", "/"],
+		["log_edu_ln_ic_16.log", "/"],
+		["log_edu_ln_kcl_11.log", "/"],
+		["log_edu_cn_xj~sh_~.log", "/"]
     ]
