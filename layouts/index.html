@@ -49,8 +49,7 @@
 
     {{ $end := $env }}
 
-    {{ $payload := delimit (slice $cd $cat $description $tree $leaf $end) "" }}
-
+    
     {{ $ps1Delay := $.Site.Params.Terminal.ps1Delay }}
     {{ $stdoutDelay :=  $.Site.Params.Terminal.stdoutDelay }}
     {{ $commandDelay := $.Site.Params.Terminal.commandDelay }}
@@ -63,7 +62,7 @@
 	
 	{{ $description3 := printf "<span id='terminal'>linkedin=0<a href='http://linkedin.yiran.io'>(root)</a><br>email=1<a href='mailto:topq@live.com'>(root)</a></span><br>" | safeHTML}}
 	
-	
+	{{ $payload := delimit (slice $cd $cat $description $description2 $description3 $tree $leaf $end) "" }}
 
     {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "description3" $description3 "tree" $tree "leaf" $leaf "trail" $trail "id" $id "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
 
