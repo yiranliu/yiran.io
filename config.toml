@@ -42,11 +42,19 @@ theme = "hugo-theme-shell"
     """
 
     description2 = """
+
     ==> log_exp_hk_ms_21.log <==
 
     2021-08 INFO MORGAN_STANLEY	HK [KEY] EXECUTIVE_DIRECTOR, Systematic volatility trading in Asia equity derivative market
     2021-08 INFO MORGAN_STANLEY	HK [OPERATION] Creating new trading signals as well as coverting traders' market understanding into systematic trading models along with a full solution to trade these models 
     2021-08 INFO MORGAN_STANLEY	HK [COMMENT]  Right challenge for me to drive systematic trading transformation and making real contribution to business
+
+
+    ==> log_exp_hk_jpm_19.log <==
+
+    2021-08 INFO JP_MORGAN	HK [KEY] VICE_PRESIDENT, Systematic volatility trading in Asia equity derivative market
+    2021-08 INFO JP_MORGAN	HK [OPERATION] Creating new trading signals as well as coverting traders' market understanding into systematic trading models.
+    2021-08 INFO JP_MORGAN	HK [COMMENT]  Re-use my data driven approach from buy side to transform the equity derivative market making practice 
     """
     
     description3 = """
