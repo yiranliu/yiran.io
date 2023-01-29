@@ -51,7 +51,7 @@ theme = "hugo-theme-shell"
 	2017-08 INFO AVITAH	LN [COMMENT] Working with raw fundamental data and trying to predict the long-term market with limited historical data is like trying to predict the weather for next year with only yesterday's mood swings, it's a real head-scratcher of a challenge!
 	==> log_exp_ln_cmc_12.log <==
 	2012-08 INFO CMC LN [KEY] LEAD_QUANT, market maker, automated market-making models and high-frequency systems
-	2012-08 INFO CMC LN [COMMENT] Learning about high frequency trading and market making is like becoming a wizard in a secret society, you gain the knowledge and skills to cast spells (aka write trading logic) and learn how to tell what's real magic (what works) and what's just smoke and mirrors (cheats) in the mystical realm of backtesting and strategy development
+	2012-08 INFO CMC LN [COMMENT] Learning about high frequency market making is like becoming a wizard in a secret society, you gain the skills to cast spells (aka write trading logic) and learn how to tell what's real magic (what works) and what's just smoke and mirrors (cheats) in the mystical realm of backtesting
 	==> log_exp_ln_oak_11.log <==
 	2011-08 INFO OAK LN [KEY] QUANT_TRADER, automated market-making models and high-frequency systems
 	2011-08 INFO OAK LN [COMMENT] Incubating a hedge fund inside a top prop trading firm is like trying to hatch a dragon egg in a fiery furnace, it's a high-heat and high-pressure learning experience that gives you a hands-on workout in the entire quant trading process.
@@ -60,10 +60,9 @@ theme = "hugo-theme-shell"
 	2016-08 INFO IC LN [COMMENT] When work and study collide, my social life is as non-existent as a unicorn at a science convention
 	==> log_edu_ln_kcl_11.log <==
 	2011-08 INFO KCL LN [KEY] KINGS_COLLEGE_LONDON, MSC in Financial Mathematics (Stochastics)
-	2011-08 INFO KCL LN [COMMENT] Countless late nights spent in Maughan Library, playing poker and searching for the perfect sports betting algorithm to bring me financial freedom, is a wild ride!
+	2011-08 INFO KCL LN [COMMENT] Countless late nights spent in Maughan Library, searching for the perfect sports betting algorithm to bring me financial freedom, is a wild ride!
 	==> log_edu_cn_xj~sh_~.log <==
-	2009-08 INFO CHINA SHANGHAI [KEY] ME, learn to study seriously. Experience a rush of memories with a stroll down memory lane. Revisit your first adventures in the big city, where excitement and learning walked hand in hand. Let nostalgia take you back to a time of growth and discovery, and relive the thrill of embracing new opportunities in an urban setting
-	2005-08 INFO CHINA XINJIANG [KEY] ME, pure happiness
+	2009-08 INFO CHINA SHANGHAI [COMMENT] Experience a rush of memories with a stroll down memory lane. Revisit your first adventures in the big city, where excitement and learning walked hand in hand. Let nostalgia take you back to a time of growth and discovery, and relive the thrill of embracing new opportunities in an urban setting
 	2005-08 INFO CHINA XINJIANG [COMMENT] Nostalgia whispers softly, as I recall the blissful days of my youth, spent basking in the golden rays of the sun amidst the rolling hills of rural China. The very thought of it brings a smile to my lips, for it was a time of pure happiness, untainted by the complexities of the world.
     """
     
@@ -78,10 +77,5 @@ theme = "hugo-theme-shell"
     files = [
         ["log_exp_hk_ms_21.log", "/"],
 		["log_exp_hk_jpm_19.log", "/"],
-		["log_exp_ln_avt_17.log", "/"],
-		["log_exp_ln_cmc_12.log", "/"],
-		["log_exp_ln_oak_11.log", "/"],
-		["log_edu_ln_ic_16.log", "/"],
-		["log_edu_ln_kcl_11.log", "/"],
-		["log_edu_cn_xj~sh_~.log", "/"]
+		["...", "/"],
     ]
