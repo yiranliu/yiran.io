@@ -7,7 +7,7 @@ theme = "hugo-theme-shell"
     [Params.Terminal]
     schema = "gruvbox_dark"
     userName = "root"
-    pcName = "terminal5"
+    pcName = "yiran.io"
     workDir = "doc"
     profile = "readme.nfo"    
     # Note: speed at which text is displayed on the terminal
@@ -42,7 +42,11 @@ theme = "hugo-theme-shell"
     """
 
     description2 = """
-    description2 to be added>> 
+    ==> log_exp_hk_ms_21.log <==
+
+    2021-08 INFO MORGAN_STANLEY	HK [KEY] EXECUTIVE_DIRECTOR, Systematic volatility trading in Asia equity derivative market
+    2021-08 INFO MORGAN_STANLEY	HK [OPERATION] Creating new trading signals as well as coverting traders' market understanding into systematic trading models along with a full solution to trade these models 
+    2021-08 INFO MORGAN_STANLEY	HK [COMMENT]  Right challenge for me to drive systematic trading transformation and making real contribution to business
     """
     
     description3 = """
