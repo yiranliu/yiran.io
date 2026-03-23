@@ -42,13 +42,17 @@ theme = "hugo-theme-shell"
     """
 
     description2 = """
+	==> log_exp_hk_mlp_25.log <==
+	2021-08 INFO MILLENIUM HK [KEY] Quant Trader, Non-linear stats arb
+	2021-08 INFO MILLENIUM	HK [COMMENT] Started my career as a quant trader. Spent years in the wormhole building engines for other people to drive. Now the pod hands me the keys back. Like Cooper returning in Interstellar — everything feels familiar and nothing feels the same. Same butterflies, better map. No victory lap to report yet — just a pilot with a heavier toolbox and a healthy respect for what I don't know. It's good to be back in the seat.
+	
 	==> log_exp_hk_ms_21.log <==
 	2021-08 INFO MORGAN_STANLEY	HK [KEY] EXECUTIVE_DIRECTOR, Systematic volatility trading in Asia equity derivative market
-	2021-08 INFO MORGAN_STANLEY	HK [COMMENT]  Right challenge for me to drive systematic trading transformation and making real contribution to business
+	2021-08 INFO MORGAN_STANLEY	HK [COMMENT]  Sys vol, stat arb, microstructure alpha, ETP market making — built the signals, shipped the models, kept the engine humming across time zones. Like Taylor Mason, I walked in believing the quant work would speak for itself. It does speak — just sometimes in a room you don't have access to. "We're fine, we're Lehman." The builders and the steerers are rarely on the same org chart. Left with world-class exposure, hard-won clarity, and stories I'll save for the memoir.
 
 	==> log_exp_hk_jpm_19.log <==
 	2019-08 INFO JP_MORGAN	HK [KEY] VICE_PRESIDENT, Systematic volatility trading in Asia equity derivative market
-	2019-08 INFO JP_MORGAN	HK [COMMENT]  Re-use my data driven approach from buy side to transform the equity derivative market making practice 
+	2019-08 INFO JP_MORGAN	HK [COMMENT]  Brought the buy-side data-driven playbook into a sell-side derivatives franchise — like teaching a sumo wrestler to do ballet.
 
 	==> log_exp_ln_avt_17.log <==
 	2017-08 INFO AVITAH	LN [KEY] QUANT, hedge fund, trading European electricity/coal/carbon/natgas markets
@@ -82,7 +86,8 @@ theme = "hugo-theme-shell"
     use = true    
     folderName = "var/log"
     files = [
-        ["log_exp_hk_ms_21.log", "/"],
+        ["log_exp_hk_ml_25.log", "/"],
+		["log_exp_hk_ms_21.log", "/"],
 		["log_exp_hk_jpm_19.log", "/"],
 		["log_exp_ln_avt_17.log", "/"],
 		["log_exp_ln_cmc_12.log", "/"],
