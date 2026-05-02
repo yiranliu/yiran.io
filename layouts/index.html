@@ -65,6 +65,6 @@
 	{{ $payload := delimit (slice $cd $cat $description $description2 $description3 $tree $leaf $end) "" }}
 	
 
-    {{ partial "partials/typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "description3" $description3 "tree" $tree "leaf" $leaf "trail" $trail "id" $id "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
+    {{ partial "typeIndex.html" (dict "context" . "env" $env "cd" $cd "envWithDir" $envWithDir "cat" $cat "description" $description "description2" $description2 "description3" $description3 "tree" $tree "leaf" $leaf "trail" $trail "id" $id "ps1delay" $ps1Delay "stdoutdelay" $stdoutDelay "commanddelay" $commandDelay ) }}
 
 {{ end }}
