@@ -17,6 +17,7 @@
 {{ with (eq .Site.Params.Terminal.schema "ubuntu") }} {{- $terminal_style = resources.Get "sass/ubuntu.scss" | css.Sass | minify -}} {{ end }}
 {{ with (eq .Site.Params.Terminal.schema "retro") }} {{- $terminal_style = resources.Get "sass/retro.scss" | css.Sass | minify -}} {{ end }}
 {{ with (eq .Site.Params.Terminal.schema "goph") }} {{- $terminal_style = resources.Get "sass/goph.scss" | css.Sass | minify -}} {{ end }}
+{{ with (eq .Site.Params.Terminal.schema "adventure_time") }} {{- $terminal_style = resources.Get "sass/adventure_time.scss" | css.Sass | minify -}} {{ end }}
 
 {{- $terminal_style.Content | safeCSS -}}
 </style>

@@ -9,7 +9,22 @@
 <span id="std_out_04"></span> <br>
 <span id="ps1_04"></span>
 
+<div id="terminal-interactive" style="display:none;">
+    <br>
+    <span id="terminal">--- Interactive mode ---</span><br>
+    <span id="terminal">Type 'help' for available commands</span><br>
+    <br>
+    <div id="terminal-output"></div>
+    <div id="terminal-input-line">
+        <strong><span id='user'>root@yiran.io</span><span id='terminal'>:</span><span id='dir'>~/doc</span></strong><span id='terminal'>$</span>
+        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false"
+            style="background:transparent;border:none;color:#F8DCC0;font:inherit;outline:none;width:60%;caret-color:#F8DCC0;">
+    </div>
+</div>
+
 <script type="text/javascript">
+    var autoScroll = true;
+
     async function typewriter(text, elementId, waitAfter) {
         var n = 0,
             isTag = false
@@ -19,7 +34,10 @@
         const wait = () => new Promise(r => setTimeout(r, waitAfter));
         const nowait = () => new Promise(r => r());
 
-        const render = () => el.innerHTML = (text.slice(0, n + 1) + addText);
+        const render = () => {
+            el.innerHTML = (text.slice(0, n + 1) + addText);
+            if (autoScroll) window.scrollTo(0, document.body.scrollHeight);
+        };
 
         const cursor = document.createElement('span');
         cursor.id = "blink";
@@ -53,22 +71,89 @@
         return parsed;
     }
 
+    const fileData = {{ .fileData | safeJS }};
+    const fileList = {{ .fileList | safeJS }};
+    const promptHTML = '<strong><span id=\'user\'>root@yiran.io</span><span id=\'terminal\'>:</span><span id=\'dir\'>~/doc</span></strong><span id=\'terminal\'>$</span>';
+
     const ps1Delay = parseDelay("{{ .ps1delay }}"),
         stdoutDelay = parseDelay("{{ .stdoutdelay }}"),
         commandDelay = parseDelay("{{ .commanddelay }}");
     const typeeffetct = async () => {
-		await typewriter("{{ .env }}", "ps1_01", ps1Delay); await typewriter("{{ .cd }}", "cd", commandDelay);
-		await typewriter("{{ .envWithDir }}", "ps1_02", ps1Delay); await typewriter("{{ .cat }}", "cat", commandDelay);
-		await typewriter("{{ .description }}", "std_out_01", stdoutDelay);						
-		await typewriter("{{ .envWithDir }}", "ps1_03", ps1Delay); await typewriter("{{ .tree }}", "tree", commandDelay);
-		await typewriter("{{ .leaf }}", "std_out_02", 1);
-		await typewriter("{{ .envWithDir }}", "ps1_05", ps1Delay); await typewriter("{{ .trail }}", "trail", commandDelay);
-		await typewriter("{{ .description2 }}", "std_out_03", 1);
-		await typewriter("{{ .envWithDir }}", "ps1_06", ps1Delay); await typewriter("{{ .id }}", "id", commandDelay);
-		await typewriter("{{ .description3 }}", "std_out_04", stdoutDelay);
-		await typewriter("{{ .envWithDir }}", "ps1_04", ps1Delay);
+        autoScroll = true;
+        await typewriter("{{ .env }}", "ps1_01", ps1Delay); await typewriter("{{ .cd }}", "cd", commandDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_02", ps1Delay); await typewriter("{{ .cat }}", "cat", commandDelay);
+        await typewriter("{{ .description }}", "std_out_01", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_03", ps1Delay); await typewriter("{{ .tree }}", "tree", commandDelay);
+        await typewriter("{{ .leaf }}", "std_out_02", 1);
+        await typewriter("{{ .envWithDir }}", "ps1_05", ps1Delay); await typewriter("{{ .trail }}", "trail", commandDelay);
+        await typewriter("{{ .description2 }}", "std_out_03", 1);
+        await typewriter("{{ .envWithDir }}", "ps1_06", ps1Delay); await typewriter("{{ .id }}", "id", commandDelay);
+        await typewriter("{{ .description3 }}", "std_out_04", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_04", ps1Delay);
+
+        document.getElementById("terminal-interactive").style.display = "block";
+        document.getElementById("terminal-input").focus();
+        window.scrollTo(0, document.body.scrollHeight);
+        autoScroll = false;
     return;
 }
 
-    typeeffetct()
+    typeeffetct();
+
+    var input = document.getElementById("terminal-input");
+    var output = document.getElementById("terminal-output");
+
+    function appendOutput(text) {
+        var div = document.createElement("div");
+        div.innerHTML = text;
+        output.appendChild(div);
+    }
+
+    function scrollToInput() {
+        document.getElementById("terminal-input-line").scrollIntoView({behavior: "instant", block: "end"});
+    }
+
+    function escapeHtml(s) {
+        return s.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    }
+
+    input.addEventListener("keydown", function(e) {
+        if (e.key !== "Enter") return;
+        var cmd = input.value.trim();
+        if (!cmd) return;
+
+        appendOutput(promptHTML + ' <span id="terminal">' + escapeHtml(cmd) + '</span>');
+
+        var parts = cmd.split(/\s+/);
+        var action = parts[0];
+
+        if (action === "ls") {
+            var tree = "";
+            fileList.forEach(function(f, i) {
+                tree += (i === fileList.length - 1 ? "└── " : "├── ") + f + "<br>";
+            });
+            appendOutput('<span id="terminal">' + tree + '' + fileList.length + ' log file(s)</span>');
+        } else if (action === "clear") {
+            output.innerHTML = "";
+        } else if (action === "help") {
+            appendOutput('<span id="terminal">Available commands:<br>  ls &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list all log files<br>  cat &lt;file&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display log file content<br>  clear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear the terminal<br>  help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show this help</span>');
+        } else if (action === "cat" && parts.length >= 2) {
+            var fname = parts.slice(1).join(" ");
+            if (Object.prototype.hasOwnProperty.call(fileData, fname)) {
+                var content = fileData[fname].replace(/\n/g, "<br>");
+                appendOutput('<span id="terminal">' + content + '</span>');
+            } else {
+                appendOutput('<span id="terminal">cat: ' + escapeHtml(fname) + ': No such file. Use ls to see available files.</span>');
+            }
+        } else {
+            appendOutput('<span id="terminal">command not found: ' + escapeHtml(cmd) + ' (try help)</span>');
+        }
+
+        input.value = "";
+        scrollToInput();
+    });
+
+    document.addEventListener("click", function() {
+        input.focus();
+    });
 </script>

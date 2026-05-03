@@ -1,0 +1,25 @@
+$charcolor: #F8DCC0;
+body {
+    background: #1F1D45;
+
+    #terminal {
+        font-size: 1.5vmin;
+        color: $charcolor;
+    }
+
+    #user {
+        color: #4AB118;
+    }
+
+    #dir {
+        color: #1997C6;
+    }
+
+    .Typewriter__cursor {
+        color: $charcolor;
+    }
+}
+
+a {
+    color: #70A598;
+}

@@ -4,7 +4,7 @@ title = "Terminal@Yiran"
 
 [Params]
     [Params.Terminal]
-    schema = "gruvbox_dark"
+    schema = "adventure_time"
     userName = "root"
     pcName = "yiran.io"
     workDir = "doc"
@@ -85,7 +85,7 @@ title = "Terminal@Yiran"
     use = true    
     folderName = "var/log"
     files = [
-        ["log_exp_hk_ml_25.log", "/"],
+        ["log_exp_hk_mlp_25.log", "/"],
 		["log_exp_hk_ms_21.log", "/"],
 		["log_exp_hk_jpm_19.log", "/"],
 		["log_exp_ln_avt_17.log", "/"],
