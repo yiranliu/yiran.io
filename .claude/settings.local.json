@@ -28,7 +28,10 @@
       "Bash(curl -sL \"https://api.github.com/repos/Gogh-Co/Gogh/contents/themes\")",
       "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(x['name']\\) for x in data if 'adventure' in x['name'].lower\\(\\)]\")",
       "Bash(curl *)",
-      "Bash(\"/c/Users/macdo/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe\" server *)"
+      "Bash(\"/c/Users/macdo/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe\" server *)",
+      "Bash(unzip -o /tmp/hugo.zip -d /tmp/hugo)",
+      "Read(//tmp/**)",
+      "Bash(/tmp/hugo/hugo server *)"
     ]
   }
 }
